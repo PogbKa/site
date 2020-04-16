@@ -30,7 +30,7 @@
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<HTML СТИЛИ>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 body,html {
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	width: 100%;
 	font-family: Conv_brandon-grotesque; 
 	height: 100%;
@@ -49,35 +49,37 @@ body,html {
  	justify-content: center;
 	align-items: center
  }
-.footer__text {
-	font-family: 'Conv_brandon-grotesque-medium-italic';
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ШАПКА>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-}
-.header__body {
-	min-width: 100%;
-	background-color: #F8BACA;
+header {
 
 }
+.footer__text {
+	font-family: 'Conv_brandon-grotesque-medium-italic';
+	}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ШАПКА>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+header a {
+	text-decoration: none;
+	color: #000;
+}
 .header__row {
+	width: 100%;
+	background-color: #F8BACA;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 100px;
+	min-height: 100px;
 	padding: 10px 50px;
+	flex: 1 0 auto;
 }
 .header__column {
 	display: flex;
-	flex: 0 0 auto;
+	flex: 0 1 auto;
 	}
 
 .header__text {
 	font-family: 'Conv_brandon-grotesque-medium-italic';
 	font-size: 40px;
-	color: #000;
 	letter-spacing: 15px;
-	text-decoration: none;
-
-}
+	}
 .header__menu {}
 .header__menu a {
 	text-decoration: none;
@@ -98,7 +100,7 @@ body,html {
 	height: 2px;
 	background: black;
 	position: absolute;
-	top: 40px;
+	bottom: 0px;
 	left: 50%;
 	transform: translateX(-50%);
 	}
@@ -115,10 +117,12 @@ body,html {
 .header__search {
 		display: flex;
 		flex-direction: column;
+		flex: 0 1 auto;
 	}
 .header__info {
 	font-family: 'Conv_brandon-grotesque-regular-italic';
-	margin: 5px 15px;
+	padding: 5px 15px;
+
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< КОНЕЦ ШАПКИ>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -128,12 +132,16 @@ body,html {
 .tabs_body {
 	display: none;
 	background-color: #FFFFEA;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-around;
 	margin: 0 auto;
+
 }
-.tabs_block a {text-decoration: none; color:  black;
-transition: 0.5s;}
+.tabs_block a {
+	text-decoration: none;
+	color:  black;
+	transition: 0.5s;
+	}
 .tabs_block a:hover {
 	color: #F8BACA;
 	transition: 0.5s;
@@ -144,7 +152,7 @@ transition: 0.5s;}
 	font:italic normal 1.4em Conv_brandon-grotesque-medium-italic,sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	margin: 0px 50px 30px 0;
+	margin: 0px 0px 30px 0;
 	padding: 50px 20px 0 50px;
 }
 .tabs_body:target {
@@ -157,7 +165,7 @@ transition: 0.5s;}
 	justify-content: space-between;
 	align-items: center;
 	max-width: 500px;
-	margin: 0 50px;
+	padding: 50px 20px;
 	
 }
 .tabs_image p {
