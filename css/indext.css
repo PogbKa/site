@@ -28,9 +28,13 @@
 	font-style: normal;
 }
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<HTML СТИЛИ>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+* {
+	box-sizing:border-box;
+	box-sizing: content-box;
+}
 body,html {
-	padding: 0;
 	margin: 0 auto;
+	padding: 0;
 	width: 100%;
 	font-family: Conv_brandon-grotesque; 
 	height: 100%;
@@ -49,9 +53,6 @@ body,html {
  	justify-content: center;
 	align-items: center
  }
-header {
-
-}
 .footer__text {
 	font-family: 'Conv_brandon-grotesque-medium-italic';
 	}
@@ -61,7 +62,6 @@ header a {
 	color: #000;
 }
 .header__row {
-	width: 100%;
 	background-color: #F8BACA;
 	display: flex;
 	justify-content: space-between;
@@ -74,24 +74,31 @@ header a {
 	display: flex;
 	flex: 0 1 auto;
 	}
+.header__column:nth-child(2) {
+	flex-grow: 1;
+}
 
 .header__text {
 	font-family: 'Conv_brandon-grotesque-medium-italic';
 	font-size: 40px;
 	letter-spacing: 15px;
 	}
-.header__menu {}
+.header__menu { width: 100%; }
 .header__menu a {
 	text-decoration: none;
 	color: #000;
 	transition: 1s;
 }
 .menu__list  {
+	margin: 0;
+	padding: 0;
 	display: flex;
 	list-style: none;
+	justify-content: space-around;
 		}
 .menu__list > li {
 	position: relative;
+	padding: 0 10px;
 
 }
 .menu__list > li > a:hover:after {
@@ -105,11 +112,11 @@ header a {
 	transform: translateX(-50%);
 	}
 .menu__list > li > a:hover {
-	padding: 0 0 0 20px;
+	padding: 10px 0 0 0px;
 	transition: 1s;
-}
+	}
 .menu__link {
-	margin: 0 30px;
+	display: flex;
 	font:normal 1.4em Conv_brandon-grotesque-medium-italic,sans-serif;
 	font-style: italic;
 	letter-spacing: 3px;
@@ -173,7 +180,7 @@ header a {
 	max-width: 500px;
 }
 img {
-	max-width: 400px;
+	max-width: 350px;
 }
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ВЫПАДАЮЩАЯ МЕНЮШКА >>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
@@ -189,52 +196,3 @@ font: 100 1em Conv_brandon-grotesque-medium-italic,sans-serif;
 
 }
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< КОНТЕНТ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
-
-
-
-
-
-/*>>>>>>>>>> Способ с выпадающим блоком <<<<<<<<<<<<
-	.sub-header__row { 
-	width: 100%;
-	height: 350px;
-	display: flex;
-	background: #f6f6f3;
-	padding: 0;
-	margin: 0;
-	align-items: center;
-	justify-content: space-between;
-	opacity: 1;
-}
-
-.sub-header__colomn li {
-	margin: 40px 50px 40px 50px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-
-
-}
-.sub-menu__link {
-	text-decoration: none;
-	font:normal 1.4em Conv_brandon-grotesque-medium-italic,sans-serif;
-	font-style: italic;
-	letter-spacing: 3px;
-	color: black;
-	}
-	>>>>>>>>>>>>> HTML <<<<<<<<<<<<<<<<
-	<div class="sub-header__row">
-					<div class="sub-header__colomn">
-						<li><a href="#" class="sub-menu__link">Раздел 1</a></li>
-						<li><a href="#" class="sub-menu__link">Раздел 2</a></li>
-						<li><a href="#" class="sub-menu__link">Раздел 3</a></li>
-						<li><a href="#" class="sub-menu__link">Раздел 4</a></li>
-						<li><a href="#" class="sub-menu__link">Раздел 5</a></li>
-					</div>
-					<div class="sub-header__colomn">
-						<img src="https://sara.com.ua/image/cache/files44/lu2305_1-640x640.jpg" height="300">
-
-					</div>
-				</div>
-	*/
