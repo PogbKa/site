@@ -20,3 +20,16 @@
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+const anchors = document.querySelectorAll('a[href*="footer_body"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function(event){
+    event.preventDefault();
+    const blockID = anchor.getAttribute('href')
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior:"smooth",
+      block: "start"
+    })
+  })
+}
