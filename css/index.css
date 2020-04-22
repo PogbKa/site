@@ -1,0 +1,347 @@
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<HTML СТИЛИ>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	* {
+		box-sizing:border-box;
+		box-sizing:content-box;
+		}
+	 @import "fonts.css";
+	 body,html {
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+		font-family: Conv_brandon-grotesque; 
+		height: 100%;
+		display: flex;
+	 	flex-direction: column;
+	 	background-color: #FFFFff;
+		}
+	 main {
+	 	flex-grow: 1;
+	 }
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<HTML СТИЛИ>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ШАПКА>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	header a {
+		text-decoration: none;
+		color: #000;
+		}
+		.header__row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			min-height: 100px;
+			padding: 10px 50px;
+			flex: 1 0 auto;
+			background-color: #F8BACA;
+			margin: 0 auto;
+		}
+		.header__column {
+			display: flex;
+			flex: 0 1 auto;
+			}
+		.header__column:nth-child(2) {
+			flex-grow: 1;
+		}
+
+		.header__text {
+			font-family: 'Conv_brandon-grotesque-medium-italic';
+			font-size: 40px;
+			letter-spacing: 15px;
+			}
+		.header__menu { 
+			width: 100%; 
+			display: flex;
+			justify-content: center;
+		}
+		.header__menu a {
+			text-decoration: none;
+			color: #000;
+			transition: 1s;
+
+		}
+		.menu__list  {
+			max-width: 1000px;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			list-style: none;
+			justify-content: space-around;
+				}
+		.menu__list > li {
+			position: relative;
+			padding: 5px 20px 5px 20px;
+			text-align: center;
+		}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ШАПКА>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<АНИМАЦИЯ>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Тестовый вариант>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*.menu__list a::before, 
+    .menu__list a::after {
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+      .menu__list a::before, 
+      .menu__list a::after {
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+      }
+      .menu__list a::before {
+        top: 0;
+        left: 0;
+      }
+      .menu__list a::after {
+        bottom: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+      }
+      .menu__list a:hover::before, 
+      .menu__list a:hover::after {
+        width: 100%;
+        height: 100%;
+        -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+      }
+      .menu__list a:hover::before {
+        border-top-color: white;
+        border-right-color: white;
+      }
+      .menu__list a:hover::after {
+        border-bottom-color:white;
+        border-left-color: white;
+        -webkit-transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+        transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+      }*/
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<АНИМАЦИЯ>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.menu__list a:before {
+		 position: absolute;
+		 content: "";
+		 left: 1px; right: 1px; top: 1px; bottom: 1px;
+		 border-bottom: 2px solid  black;
+		 transition: .4s; 
+		 transform: scaleX(0);}
+	.menu__list a:hover:before {
+				transform: scaleX(1);}
+	
+	.menu__link {
+		 display: flex;
+		 font:normal 1.4em Conv_brandon-grotesque-medium-italic,sans-serif;
+		 font-style: italic;
+		 letter-spacing: 3px;}
+	.header__search {
+		 display: flex;
+		 flex-direction: column;
+		 flex: 0 1 auto;}
+	.header__info {
+		 font-family: 'Conv_brandon-grotesque-regular-italic';
+		 padding: 5px 15px;}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< КОНЕЦ ШАПКИ>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ВЫПАДАЮЩАЯ МЕНЮШКА >>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.tabs_body {
+		display: none;
+		background-color: #FFFFEA;
+		align-items: flex-start;
+		justify-content: space-around;
+		margin: 0 auto;
+
+	}
+	.tabs_block a {
+		text-decoration: none;
+		color:  black;
+		transition: 0.5s;
+		}
+	.tabs_block a:hover {
+		color: #F8BACA;
+		transition: 0.5s;
+		padding-left: 15px;
+	}
+	.tabs_block li {
+		list-style-type: none;
+		font:italic normal 1.4em Conv_brandon-grotesque-medium-italic,sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		margin: 0px 0px 30px 0;
+		padding: 50px 20px 0 50px;
+	}
+	.tabs_body:target {
+		display: flex;
+		transition: 2s;
+	}
+	.tabs_image {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 500px;
+		padding: 50px 20px;
+		
+	}
+	.tabs_image p {
+		text-align: center;
+		max-width: 500px;
+	}
+	.tabs_image img {
+		max-width: 350px;
+	}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ВЫПАДАЮЩАЯ МЕНЮШКА >>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< КОНТЕНТ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	.conteiner {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	font: 100 1em Conv_brandon-grotesque-medium-italic,sans-serif;
+	}
+	.conteiner img {
+		height: 700px;
+	}
+	.conteiner_row {
+		display: flex;
+		justify-content: space-around;
+		margin: 0 auto;
+		align-items: center;
+		width: 100%;
+		padding: 10px 10px;
+	}
+	.conteiner__img {
+		display: flex;
+		min-height: 40vw;
+		align-items: center;
+
+	}
+	.conteiner__context {
+		max-width: 400px;
+		align-items: center;
+	}
+	.conteiner button {
+		width: 100px;
+		border-radius: 5px;
+		background-color: #F8BACA;
+		border: none;
+		color: #fff;	;
+		font: 300 1.2em Conv_brandon-grotesque-medium-italic,sans-serif;
+		font-style: italic;
+		}
+	[data-aos="new-animation_right"] {
+	            transform: translateX(0px);
+		}
+	[data-aos="new-animation_right"].aos-animate {
+	            transform: translateX(200px);
+		}
+	[data-aos="new-animation_left"] {
+	            transform: translateX(0px);
+		}
+	[data-aos="new-animation_left"].aos-animate {
+	            transform: translateX(-200px);
+		}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< КОНТЕНТ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< FOOTER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+	 footer {
+	 	width: 100%;
+	 	min-height: 300px;
+	 	background-color: #F8BACA;
+	 		 }
+	 footer a {
+	 	text-decoration: none;
+		color: #000;
+		font-family: 'Conv_brandon-grotesque-medium-italic';
+		font-size: 20px;
+	 }
+	 .footer_body {
+	 	display: flex;
+	 	max-width: 1800px;
+	 	height: 100%;
+	 	margin: 0 auto;
+	 }
+	 .footer__contact {
+	 	display: flex;
+	 	flex-direction: column;
+		font-family: 'Conv_brandon-grotesque-medium-italic';
+		align-items: center;
+		justify-content: flex-start;
+		padding: 10px;
+		width: 33.33%;
+		}
+	.footer_icon img, .icon {
+			transition: 1s;
+		}
+	 .footer_icon img {
+		width: 100px;
+		height: 100px;
+		}
+	.footer_text {
+		padding: 10px;
+	}
+	.icon:hover,
+	.footer_icon img:hover {
+		transform: scaleX(1.1)scaleY(1.1);
+		cursor: pointer;
+	}
+	 .map {
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		justify-content: center;
+		padding: 20px 20px;
+		width: 33.33%;
+	}
+	 iframe {
+		border-radius: 5px;
+		width: 100%;
+	}
+	 form {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: flex-start;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 0  auto;
+      width: 33.33%;
+
+
+     } 
+     input[type=text],select,input[type=tel] { 
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      width: 300px;
+      padding: 4px 10px;
+      margin: 4px 0;
+      border-radius: 4px;
+     }
+  
+     input[type=submit] {
+      display: inline-block;
+	  margin-top: 10px;
+      padding: 5px 20px;
+      border:none;
+      font-size: 16px;
+      background-color: white;
+      color: #959595;
+      border-radius: 7px;
+      font: 100 1em Conv_brandon-grotesque-medium-italic,sans-serif;
+
+     }
+     input[type=submit]:hover  {
+     	color: black;
+     }
+	 textarea {
+		max-width: 300px;
+		max-height: 50px;
+		min-width: 300px;
+		min-height: 50px;
+		border-radius: 4px;
+		padding: 5px 0px;
+	}
+	
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< FOOTER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
