@@ -118,9 +118,10 @@
       }*/
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<АНИМАЦИЯ>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 	.menu__list a:before {
+		/*background: red;*/
 		 position: absolute;
 		 content: "";
-		 left: 1px; right: 1px; top: 1px; bottom: 1px;
+		 left: 0px; right: -15px; top: 1px; bottom: 1px;
 		 border-bottom: 2px solid  black;
 		 transition: .4s; 
 		 transform: scaleX(0);}
